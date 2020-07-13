@@ -1,11 +1,14 @@
 import RPi.GPIO as GPIO
 import reports as reps
-from time import sleep
+import time
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(8,GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(10,GPIO.IN)
 i = 5
+C=time.time()
+time.sleep(3)
+print(C)
 for x in range(5):
 	reps.rep("gpio.in", GPIO.input(10))
 	GPIO.output(8,GPIO.HIGH)
