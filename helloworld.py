@@ -6,10 +6,13 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setup(8,GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(10,GPIO.IN)
 i = 5
-for x in range(5):
-	reps.rep("gpio.in", GPIO.input(10))
+for x in range(5):	
 	GPIO.output(8,GPIO.HIGH)
-	ts.sleep(1)
+	ts.sleep(0.5)
+	reps.rep("gpio.in(10)", GPIO.input(10))
+	ts.sleep(0.5)
 	GPIO.output(8,GPIO.LOW)
-	ts.sleep(1)
+	ts.sleep(0.5)
+	reps.rep("gpio.in(10)", GPIO.input(10))
+	ts.sleep(0.5)
 
