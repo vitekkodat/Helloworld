@@ -5,7 +5,7 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(8,GPIO.OUT, initial=GPIO.LOW)
 GPIO.setup(10,GPIO.IN)
-i = 5
+reps.nrep()
 for x in range(5):	
 	GPIO.output(8,GPIO.HIGH)
 	ts.sleep(0.5)
