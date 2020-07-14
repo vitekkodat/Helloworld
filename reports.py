@@ -4,6 +4,6 @@ def nrep():
 	f.close()
 def rep(name, val):
 	f= open("report.txt","a")
-	f.write("value \t" + name +" equals\t%f \t at time %f \n"%(val, tts.time()))
+	f.write("value \t" + name +" equals\t%d \t at time \t %f \n"%(val, tts.time()))
 	f.close()
 
