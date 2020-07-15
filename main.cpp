@@ -1,8 +1,9 @@
-#include <iostream>
+#include <tchar.h>
+#include <urlmon.h>
 
-using namespace std;
+#pragma comment(lib, "urlmon.lib")
 int main()
 {
-    cout<<"Hello world"<<endl;
-    return 0;
+	HRESULT hr = URLDownloadToFile ( NULL, _T("http://www.cplusplus.com/forum/beginner/109232/"), _T("/var/lib/jenkins/workspace/Hello_C++/report.txt"), 0, NULL );
+	return 0;
 }
